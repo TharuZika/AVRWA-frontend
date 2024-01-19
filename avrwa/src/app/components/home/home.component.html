@@ -1,52 +1,52 @@
 <ng-container>
-  <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img [src]="slideImg2" class="d-block w-100" alt="Slide 1">
+  <div class="p-4 shadow-4 text-white heroSection">
+    <div class="container">
+      <div class="row">
+        <div class="col-8">
+          <h2>Welcome to Automated Vehicle Recognition</h2>
+          <p>
+            The Vehicle Recognition Web Application is an innovative solution designed to streamline
+            the process of identifying and categorizing vehicles from uploaded images. Leveraging cutting-edge
+            technologies, the application will provide users with an intuitive and efficient tool to recognize
+            various types of vehicles, such as cars, vans, buses, planes, etc. The system will utilize a
+            user-friendly frontend developed in Angular or React, coupled with a robust Python-based backend
+            for accurate and real-time vehicle recognition.
+          </p>
+
+          <hr class="my-4"/>
+
+          <h3>About Machine Learning</h3>
+          <p>
+            Information about how the AI works and its capabilities.
+          </p>
+          <div class="btn-group gap-4">
+            <button (click)="clickLearnMore()" type="button" class="btn btn-primary">
+              Learn more
+            </button>
+            <a class="btn btn-outline-light">
+              Try now
+            </a>
+          </div>
+        </div>
+        <div class="col-4">
+          <img src="assets/images/logo-gradient.png" height="350px" alt="">
+        </div>
       </div>
-      <div class="carousel-item">
-        <img [src]="slideImg2" class="d-block w-100" alt="Slide 2">
-      </div>
-      <!-- Add more carousel items as needed -->
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
   </div>
 
-  <div class="container">
-    <div class="mt-5">
-      <h2>Welcome to Automated Vehicle Recognition</h2>
-      <p>The Vehicle Recognition Web Application is an innovative solution designed to streamline
-        the process of identifying and categorizing vehicles from uploaded images. Leveraging cutting-edge
-        technologies, the application will provide users with an intuitive and efficient tool to recognize
-        various types of vehicles, such as cars, vans, buses, planes, etc. The system will utilize a
-        user-friendly frontend developed in Angular or React, coupled with a robust Python-based backend
-        for accurate and real-time vehicle recognition.</p>
-
-      <!-- About AI section -->
-      <div class="mt-4">
-        <h3>About AI</h3>
-        <p>Information about how the AI works and its capabilities.</p>
-      </div>
-    </div>
-
+  <div class="container mt-5" id="prodSection">
     <div class="row text-center">
-      <div class="card col" [routerLink]="['/cctv']" style="width: 18rem; cursor: pointer;">
-        <img src="https://assets.techrepublic.com/uploads/2023/07/tr71123-ai-art.jpeg" class="card-img-top" alt="...">
+      <div class="card col m-3" [routerLink]="['/cctv']" style="width: 18rem; cursor: pointer;">
+        <img src="https://www.briefcam.com/wp-content/uploads/2019/12/machine-learning-cctv.jpg" width="400px" height="300px" class="card-img-top mt-2" alt="...">
         <div class="card-body">
           <h5 class="card-title">Vehicle Recognized with CCTV</h5>
           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
           <a [routerLink]="['/cctv']" class="btn btn-primary">Try now</a>
         </div>
       </div>
-      <div class="card col text-center" [routerLink]="['/media']" style="width: 18rem; cursor: pointer;">
-        <img src="https://assets.techrepublic.com/uploads/2023/07/tr71123-ai-art.jpeg" class="card-img-top" alt="...">
+      <div class="card col m-3" [routerLink]="['/media']" style="width: 18rem; cursor: pointer;">
+        <img src="https://scx2.b-cdn.net/gfx/news/2019/aibasedvisua.jpg" class="card-img-top mt-2" width="400px" height="300px" alt="...">
         <div class="card-body">
           <h5 class="card-title">Vehicle Recognized with Media</h5>
           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>

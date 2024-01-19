@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import { Router } from '@angular/router';
+import {GeneralService} from "../../services/general.service";
+import {HttpErrorResponse, HttpResponse} from "@angular/common/http";
 
 @Component({
   selector: 'app-home',
@@ -11,7 +13,19 @@ export class HomeComponent implements OnInit {
   slideImg2: string = "";
   slideImg3: string = "";
 
-  constructor() {
+  constructor(private readonly service: GeneralService) {
+  }
+
+  clickLearnMore(){
+    this.service.testApiCall().subscribe({
+      next: (res: HttpResponse<any>) => {
+        console.log("Test Done!")
+      },
+      error: err =>{
+        console.log("Test Error!");
+        console.log(err);
+      }
+    })
   }
 
   ngOnInit(): void {
