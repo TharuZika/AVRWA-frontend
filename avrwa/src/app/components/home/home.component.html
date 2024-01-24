@@ -1,9 +1,10 @@
 <ng-container>
-  <div class="p-4 shadow-4 text-white heroSection">
-    <div class="container">
+  <div class="shadow-4 text-white heroSection">
+    <app-hero-section></app-hero-section>
+    <div class="container pt-5">
       <div class="row">
-        <div class="col-8">
-          <h2>Welcome to Automated Vehicle Recognition</h2>
+        <div class="col-4">
+          <h2>AUTOMATED VEHICLE RECOGNITION PLATFORM</h2>
           <p>
             The Vehicle Recognition Web Application is an innovative solution designed to streamline
             the process of identifying and categorizing vehicles from uploaded images. Leveraging cutting-edge
@@ -15,44 +16,63 @@
 
           <hr class="my-4"/>
 
-          <h3>About Machine Learning</h3>
-          <p>
-            Information about how the AI works and its capabilities.
-          </p>
-          <div class="btn-group gap-4">
-            <button (click)="clickLearnMore()" type="button" class="btn btn-primary">
-              Learn more
-            </button>
-            <a class="btn btn-outline-light">
-              Try now
-            </a>
+          <div class="">
+            <p>Try now ->
+              <a (click)="navigateTo('cctv')" class="btn btn-outline-light mx-2">CCTV</a>
+              <a (click)="navigateTo('media')" class="btn btn-outline-light mx-2">Media</a>
+            </p>
+
           </div>
+
         </div>
-        <div class="col-4">
-          <img src="assets/images/logo-gradient.png" height="350px" alt="">
+        <div class="col-2"></div>
+        <div class="col-6">
+          <img src="assets/images/main-dye.png" class="img-fluid" alt="">
         </div>
       </div>
     </div>
   </div>
 
-  <div class="container mt-5" id="prodSection">
-    <div class="row text-center">
-      <div class="card col m-3" [routerLink]="['/cctv']" style="width: 18rem; cursor: pointer;">
-        <img src="https://www.briefcam.com/wp-content/uploads/2019/12/machine-learning-cctv.jpg" width="400px" height="300px" class="card-img-top mt-2" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Vehicle Recognized with CCTV</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a [routerLink]="['/cctv']" class="btn btn-primary">Try now</a>
+  <div class="container">
+    <section class="py-5 container">
+      <div class="row py-lg-5">
+        <div class="col-4 mx-auto">
+          <h4 class="fw-bold">FEATURES</h4>
+          <hr class="divider my-4">
+          <h5>CLASSIFIED VEHICLE COUNT</h5>
+          <p>Every different type of vehicle will be classified separately.</p>
+          <p>Pedestrians can also be classified. Categories included are:</p>
+
+          <div class="table-responsive">
+            <table class="table table-bordered">
+              <thead>
+              <tr>
+                <th>Category</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>Car</td>
+              </tr>
+              <tr>
+                <td>Van</td>
+              </tr>
+              <tr>
+                <td>Motorcycle</td>
+              </tr>
+              <tr>
+                <td>Truck</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="col-2"></div>
+        <div class="col-6 pt-5">
+          <img src="assets/images/vehicle-count.png" alt="Trafflytic Vehicle Classification" class="img-fluid rounded-3 pt-5">
         </div>
       </div>
-      <div class="card col m-3" [routerLink]="['/media']" style="width: 18rem; cursor: pointer;">
-        <img src="https://scx2.b-cdn.net/gfx/news/2019/aibasedvisua.jpg" class="card-img-top mt-2" width="400px" height="300px" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Vehicle Recognized with Media</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a [routerLink]="['/media']" class="btn btn-primary">Try now</a>
-        </div>
-      </div>
-    </div>
+    </section>
   </div>
+
 </ng-container>

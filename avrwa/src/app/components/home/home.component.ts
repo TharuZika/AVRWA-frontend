@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit {
   slideImg2: string = "";
   slideImg3: string = "";
 
-  constructor(private readonly service: GeneralService) {
+  constructor(public router: Router, private readonly service: GeneralService) {
   }
 
   clickLearnMore(){
@@ -28,14 +28,21 @@ export class HomeComponent implements OnInit {
     })
   }
 
-  ngOnInit(): void {
+  loadImg(){
     this.slideImg1 = "https://cdn2.slidemodel.com/wp-content/uploads/70010-01-artificial-intelligence-powerpoint-template-1-558x314.jpg";
     this.slideImg2 = "https://www.slidesalad.com/wp-content/uploads/2021/06/Deep-Learning-PowerPoint-Templates-Infographics-Diagrams-0003.jpg";
     this.slideImg3 = "https://www.slidesalad.com/wp-content/uploads/2021/06/Deep-Learning-PowerPoint-Templates-Infographics-Diagrams-0001.jpg";
   }
 
+  ngOnInit(): void {
+    this.loadImg()
+  }
 
-
-
-
+  navigateTo(nav: string) {
+    if (nav === 'cctv'){
+      this.router.navigate(['/cctv']);
+    }else if (nav === 'media'){
+      this.router.navigate(['/media']);
+    }
+  }
 }

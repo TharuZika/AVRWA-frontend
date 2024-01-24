@@ -2,7 +2,7 @@
   <div class="container py-5" *ngIf="!isUploaded">
     <div class="mb-3">
       <label for="mediaFile" class="form-label">Upload a media file</label>
-      <input class="form-control" type="file" id="mediaFile">
+      <input class="form-control" type="file" id="mediaFile" (change)="onFileSelected($event)">
       <div class="text-muted end-0"><span class="text-danger">*</span>mp4,mkv,jpeg,jpg</div>
     </div>
     <button class="btn btn-success mt-5" (click)="upload()">Upload</button>

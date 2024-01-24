@@ -8,6 +8,7 @@ import { HomeComponent } from './components/home/home.component';
 import { MediaUploadComponent } from './components/media-upload/media-upload.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import {HttpClientModule} from "@angular/common/http";
+import { HeroSectionComponent } from './components/hero-section/hero-section.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import {HttpClientModule} from "@angular/common/http";
     CctvConfigComponent,
     HomeComponent,
     MediaUploadComponent,
-    NavbarComponent
+    NavbarComponent,
+    HeroSectionComponent
   ],
   imports: [
     BrowserModule,
